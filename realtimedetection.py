@@ -30,8 +30,6 @@ while True:
             img = extract_features(image)
             pred = model.predict(img)
             prediction_label = labels[pred.argmax()]
-            # print("Predicted Output:", prediction_label)
-            # cv2.putText(im,prediction_label)
             cv2.putText(im, '% s' %(prediction_label), (p-10, q-10),cv2.FONT_HERSHEY_COMPLEX_SMALL,2, (0,0,255))
         cv2.imshow("Output",im)
         cv2.waitKey(27)
